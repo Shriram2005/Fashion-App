@@ -28,6 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.shriram.fashionapp.R
 import com.shriram.fashionapp.navigation.Screen
 
@@ -125,4 +126,12 @@ fun GetStartedScreen(navController: NavHostController) {
 
         }
     }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewGetStartedScreen() {
+    val navController = rememberNavController()
+    GetStartedScreen(navController = navController)
 }

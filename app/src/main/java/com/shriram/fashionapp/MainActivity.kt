@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // Set black or white status bar icons  // true = black
-        WindowCompat.getInsetsController(window,window.decorView).isAppearanceLightStatusBars = true
+//        WindowCompat.getInsetsController(window,window.decorView).isAppearanceLightStatusBars = true
 
         enableEdgeToEdge()
         setContent {
