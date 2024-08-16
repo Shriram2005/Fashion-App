@@ -49,7 +49,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.shriram.fashionapp.R
-import com.shriram.fashionapp.customComposable.CustomShapeImage_T
 import com.shriram.fashionapp.customComposable.CustomTextField
 import com.shriram.fashionapp.navigation.Screen
 
@@ -123,7 +122,8 @@ fun RegisterScreen(navController: NavHostController) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(300.dp)
-                    .clip(RoundedCornerShape(10.dp)),
+                    .clip(RoundedCornerShape(10.dp))
+                    .scale(1.1f),
                 contentScale = ContentScale.Crop
 
             )
