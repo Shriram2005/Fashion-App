@@ -82,6 +82,7 @@ fun LoginScreen(navController: NavHostController) {
                 Icon(
                     Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                     contentDescription = "",
+                    tint = Color.Black,
                     modifier = Modifier
                         .border(
                             BorderStroke(2.dp, Color.Black),
@@ -89,12 +90,13 @@ fun LoginScreen(navController: NavHostController) {
                         )
                         .clickable {
                             // Go back
-                            navController.popBackStack()
+                            navController.navigate(Screen.GetStarted.route)
                         }
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "WELCOME BACK!",
+                    color = Color.Black,
                     fontSize = 18.sp,
                     textAlign = TextAlign.Center,
                     fontWeight = FontWeight.Bold
@@ -104,6 +106,7 @@ fun LoginScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "Let's help you find your style!",
+                color = Color.Black,
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
             )

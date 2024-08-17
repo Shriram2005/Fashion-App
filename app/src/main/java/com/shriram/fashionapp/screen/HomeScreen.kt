@@ -36,8 +36,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -77,10 +75,14 @@ fun HomeScreen(navController: NavHostController) {
                 .padding(16.dp, 32.dp),
         ) {
             Spacer(modifier = Modifier.height(16.dp))
-            Row(modifier = Modifier.fillMaxWidth()) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 Icon(
                     Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                     contentDescription = "",
+                    tint = Color.Black,
                     modifier = Modifier
                         .align(Alignment.CenterVertically)
                         .border(
@@ -106,11 +108,14 @@ fun HomeScreen(navController: NavHostController) {
                 Column {
                     Text(
                         text = "Hi $userName",
-                        fontSize = 18.sp,
-                        textAlign = TextAlign.Center,
-                        fontWeight = FontWeight.Bold
+                        color = Color.Black,
+                        fontSize = 16.sp,
+                        lineHeight = 5.sp,
+                        modifier = Modifier.padding(start = 3.dp)
                     )
-                    Row() {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
                         Icon(
                             Icons.Outlined.LocationOn,
                             contentDescription = "",
@@ -121,11 +126,11 @@ fun HomeScreen(navController: NavHostController) {
                         )
                         Text(
                             text = "Deliver to $userAddress",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Center
+                            color = Color.Gray,
+                            fontSize = 12.sp,
+                            lineHeight = 5.sp
                         )
                     }
-
                 }
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -133,9 +138,10 @@ fun HomeScreen(navController: NavHostController) {
             CustomTextField(
                 value = searchProduct,
                 onValueChange = { searchProduct = it },
-                label = {
-                    Text(text = "Search for a product")
-                },
+//                label = {
+//                    Text(text = "Search for a product")
+//                },
+                placeholder = "Search for a product",
                 leadingIcon = {
                     Icon(
                         Icons.Default.Search,

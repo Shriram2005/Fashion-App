@@ -36,14 +36,13 @@ sealed class Screen(
 
     data object WishList :
         Screen("WishList", "WishList", Icons.Outlined.FavoriteBorder, Icons.Filled.Favorite)
-
     data object Profile : Screen("Profile", "Profile", Icons.Outlined.Person, Icons.Filled.Person)
     data object Cart : Screen("Cart", "Cart", Icons.Outlined.AccountBox, Icons.Filled.AccountBox)
 }
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = Screen.Home.route) {
+    NavHost(navController = navController, startDestination = Screen.GetStarted.route) {
         composable(route = Screen.GetStarted.route) { GetStartedScreen(navController = navController) }
         composable(route = Screen.Login.route) { LoginScreen(navController = navController) }
         composable(route = Screen.Register.route) { RegisterScreen(navController = navController) }
@@ -52,7 +51,5 @@ fun NavigationGraph(navController: NavHostController) {
         composable(route = Screen.WishList.route) { WishListScreen(navController = navController) }
         composable(route = Screen.Profile.route) { ProfileScreen(navController = navController) }
         composable(route = Screen.Cart.route) { CartScreen(navController = navController) }
-
-
     }
 }

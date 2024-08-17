@@ -1,6 +1,5 @@
 package com.shriram.fashionapp.screen
 
-import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -88,6 +87,7 @@ fun RegisterScreen(navController: NavHostController) {
                 Icon(
                     Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                     contentDescription = "",
+                    tint = Color.Black,
                     modifier = Modifier
                         .border(
                             BorderStroke(2.dp, Color.Black),
@@ -95,12 +95,13 @@ fun RegisterScreen(navController: NavHostController) {
                         )
                         .clickable {
                             // Go back
-                            navController.popBackStack()
+                            navController.navigate(Screen.GetStarted.route)
                         }
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "WELCOME ONBOARD",
+                    color = Color.Black,
                     fontSize = 18.sp,
                     textAlign = TextAlign.Center,
                     fontWeight = FontWeight.Bold
@@ -110,6 +111,7 @@ fun RegisterScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "Let's help you find your style!",
+                color = Color.Black,
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
             )
@@ -201,8 +203,8 @@ fun RegisterScreen(navController: NavHostController) {
                 ),
                 elevation = ButtonDefaults.buttonElevation(10.dp),
                 onClick = {
-                    // Login Button Clicked
-                    Toast.makeText(context,"Clicked on Sign Up",Toast.LENGTH_SHORT).show()
+                    // Sign Up Button Clicked
+                    navController.navigate(Screen.Login.route)
                 }
             ) {
                 Text(text = "Sign Up", color = Color.Black)

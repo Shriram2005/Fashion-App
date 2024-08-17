@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
@@ -31,7 +30,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.shriram.fashionapp.R
 import com.shriram.fashionapp.navigation.Screen
-
 
 
 @Composable
@@ -61,6 +59,7 @@ fun GetStartedScreen(navController: NavHostController) {
         ) {
             Spacer(modifier = Modifier.height(16.dp))
             Text(text = "WELCOME",
+                color = Color.Black,
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Bold
@@ -68,6 +67,7 @@ fun GetStartedScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "Follow latest trends in fashion!",
+                color = Color.Black,
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
             )
@@ -88,6 +88,7 @@ fun GetStartedScreen(navController: NavHostController) {
 
             Text(
                 text = "FIND YOUR\nFASHION STYLE",
+                color = Color.Black,
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center
             )
