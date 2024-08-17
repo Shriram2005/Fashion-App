@@ -1,6 +1,5 @@
 package com.shriram.fashionapp.customComposable
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -33,6 +32,7 @@ fun CustomTextField(
     TextField(
         value = value,
         onValueChange = onValueChange,
+
         placeholder = {
             if (placeholder != null) {
                 Text(placeholder, fontSize = 16.sp, color = Color.Gray)
@@ -62,9 +62,9 @@ fun CustomTextField(
         modifier = Modifier
             .fillMaxWidth()
             .shadow(10.dp, RoundedCornerShape(10.dp)) // Shadow and rounded corners
-//            .padding(0.dp,0.dp)
     )
 }
+
 
 @Preview(showBackground = true)
 @Composable

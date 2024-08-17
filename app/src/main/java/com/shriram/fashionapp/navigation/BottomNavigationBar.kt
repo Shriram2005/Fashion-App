@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -32,8 +33,9 @@ fun BottomNavigationBar(navController: NavHostController) {
 
     NavigationBar(
         modifier = Modifier.height(64.dp),
-        containerColor = androidx.compose.ui.graphics.Color.White,
-        contentColor = androidx.compose.ui.graphics.Color.Black
+        containerColor = Color.White,
+        contentColor = Color.Black,
+
     ) {
         items.forEachIndexed { index, screen ->
             NavigationBarItem(
@@ -49,12 +51,15 @@ fun BottomNavigationBar(navController: NavHostController) {
                         restoreState = true
                     }
                 },
+                colors = NavigationBarItemDefaults.colors(
+                    indicatorColor = Color(0xFFFFC3C3),
+                ),
                 icon = {
                     (if (selectedIndex == index) screen.selectedIcon else screen.icon)?.let {
                         Icon(
                             imageVector = it,
                             contentDescription = null,
-                            tint = Color.Black
+                            tint = Color.Black,
                         )
                     }
                 },

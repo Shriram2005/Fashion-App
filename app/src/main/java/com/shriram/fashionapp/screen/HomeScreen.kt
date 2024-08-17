@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.shriram.fashionapp.R
-import com.shriram.fashionapp.customComposable.CustomTextField
+import com.shriram.fashionapp.customComposable.CustomSearchBar
 
 
 @Composable
@@ -135,7 +135,7 @@ fun HomeScreen(navController: NavHostController) {
             }
             Spacer(modifier = Modifier.height(8.dp))
 
-            CustomTextField(
+            CustomSearchBar(
                 value = searchProduct,
                 onValueChange = { searchProduct = it },
 //                label = {
