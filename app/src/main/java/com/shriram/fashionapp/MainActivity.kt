@@ -1,5 +1,6 @@
 package com.shriram.fashionapp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -32,6 +33,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Preview
 @Composable
 fun MyApp() {
@@ -48,7 +51,7 @@ fun MyApp() {
                 BottomNavigationBar(navController)
             }
         }
-    ) { innerPadding ->
+    ) {innerPadding ->
         NavigationGraph(navController = navController)
     }
 }

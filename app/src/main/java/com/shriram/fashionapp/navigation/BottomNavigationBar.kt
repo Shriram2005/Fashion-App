@@ -52,7 +52,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                     }
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    indicatorColor = Color(0xFFFFC3C3),
+                    indicatorColor = Color(0xFFFFCBCB),
                 ),
                 icon = {
                     (if (selectedIndex == index) screen.selectedIcon else screen.icon)?.let {

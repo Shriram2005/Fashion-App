@@ -106,7 +106,7 @@ fun GetStartedScreen(navController: NavHostController) {
                     navController.navigate(Screen.Login.route)
                 }
             ) {
-                Text(text = "GET STARTED", color = Color.Black)
+                Text(text = "Get Started", color = Color.Black)
             }
             Spacer(modifier = Modifier.height(16.dp))
             ElevatedButton(

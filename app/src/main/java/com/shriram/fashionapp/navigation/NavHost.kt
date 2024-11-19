@@ -42,7 +42,7 @@ sealed class Screen(
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = Screen.Home.route) {
+    NavHost(navController = navController, startDestination = Screen.GetStarted.route) {
         composable(route = Screen.GetStarted.route) { GetStartedScreen(navController = navController) }
         composable(route = Screen.Login.route) { LoginScreen(navController = navController) }
         composable(route = Screen.Register.route) { RegisterScreen(navController = navController) }
